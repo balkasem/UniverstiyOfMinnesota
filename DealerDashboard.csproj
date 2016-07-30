@@ -1,0 +1,647 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{74E6429B-DD37-4FDC-B232-6142852B2829}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DealerDashboard</RootNamespace>
+    <AssemblyName>DealerDashboard</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Telerik.Web.UI, Version=2015.3.1111.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Telerik\UI for ASP.NET AJAX Q3 2015\Bin45\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bootstrap\images\majdPicture" />
+    <Content Include="Applications\Apply.aspx" />
+    <Content Include="Applications\CreateProgram.aspx" />
+    <Content Include="Applications\CreateCourse.aspx" />
+    <Content Include="Applications\RegisterStudent.aspx" />
+    <Content Include="Bootstrap\images\basilPicture.png" />
+    <Content Include="Bootstrap\images\Logo.jpg" />
+    <Content Include="Bootstrap\images\majdPicture.png" />
+    <Content Include="Bootstrap\js\plugins\material-preloader\materialPreloader.css" />
+    <Content Include="Bootstrap\js\plugins\material-preloader\materialPreloader.js" />
+    <Content Include="Dreamy\HealthAppraisla.aspx" />
+    <Content Include="Dreamy\ChildRecord.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="Masterpage.Master" />
+    <Content Include="Bootstrap\css\materialize.css.map" />
+    <Content Include="Bootstrap\font\material-design-icons\Material-Design-Icons.eot" />
+    <Content Include="Bootstrap\font\material-design-icons\Material-Design-Icons.ttf" />
+    <Content Include="Bootstrap\font\material-design-icons\Material-Design-Icons.woff" />
+    <Content Include="Bootstrap\font\roboto\Roboto-Bold.ttf" />
+    <Content Include="Bootstrap\font\roboto\Roboto-Bold.woff" />
+    <Content Include="Bootstrap\font\roboto\Roboto-Bold.woff2" />
+    <Content Include="Bootstrap\font\roboto\Roboto-Light.ttf" />
+    <Content Include="Bootstrap\font\roboto\Roboto-Light.woff" />
+    <Content Include="Bootstrap\font\roboto\Roboto-Light.woff2" />
+    <Content Include="Bootstrap\font\roboto\Roboto-Medium.ttf" />
+    <Content Include="Bootstrap\font\roboto\Roboto-Medium.woff" />
+    <Content Include="Bootstrap\font\roboto\Roboto-Medium.woff2" />
+    <Content Include="Bootstrap\font\roboto\Roboto-Regular.ttf" />
+    <Content Include="Bootstrap\font\roboto\Roboto-Regular.woff" />
+    <Content Include="Bootstrap\font\roboto\Roboto-Regular.woff2" />
+    <Content Include="Bootstrap\font\roboto\Roboto-Thin.ttf" />
+    <Content Include="Bootstrap\font\roboto\Roboto-Thin.woff" />
+    <Content Include="Bootstrap\font\roboto\Roboto-Thin.woff2" />
+    <Content Include="Bootstrap\js\plugins\chartist-js\chartist.min.js.map" />
+    <Content Include="Bootstrap\js\plugins\chartist-js\LICENSE" />
+    <Content Include="Bootstrap\js\plugins\chartist-js\scss\chartist.scss" />
+    <Content Include="Bootstrap\js\plugins\chartist-js\scss\settings\_chartist-settings.scss" />
+    <Content Include="Bootstrap\js\plugins\data-tables\images\Sorting icons.psd" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\chartist.min.js.map" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\README.md" />
+    <Content Include="Bootstrap\js\plugins\xcharts\LICENSE" />
+    <Content Include="Bootstrap\js\plugins\xcharts\README.md" />
+    <Content Include="Bootstrap\sass\components\.sass-cache\d311dd92f5d16572a30384a35d5318610bed1493\_icons-material-design.scssc" />
+    <Content Include="Bootstrap\sass\components\date_picker\_default.date.scss" />
+    <Content Include="Bootstrap\sass\components\date_picker\_default.scss" />
+    <Content Include="Bootstrap\sass\components\date_picker\_default.time.scss" />
+    <Content Include="Bootstrap\sass\components\_buttons.scss" />
+    <Content Include="Bootstrap\sass\components\_cards.scss" />
+    <Content Include="Bootstrap\sass\components\_collapsible.scss" />
+    <Content Include="Bootstrap\sass\components\_color.scss" />
+    <Content Include="Bootstrap\sass\components\_dropdown.scss" />
+    <Content Include="Bootstrap\sass\components\_form.scss" />
+    <Content Include="Bootstrap\sass\components\_global.scss" />
+    <Content Include="Bootstrap\sass\components\_grid.scss" />
+    <Content Include="Bootstrap\sass\components\_icons-material-design.scss" />
+    <Content Include="Bootstrap\sass\components\_materialbox.scss" />
+    <Content Include="Bootstrap\sass\components\_mixins.scss" />
+    <Content Include="Bootstrap\sass\components\_modal.scss" />
+    <Content Include="Bootstrap\sass\components\_navbar.scss" />
+    <Content Include="Bootstrap\sass\components\_normalize.scss" />
+    <Content Include="Bootstrap\sass\components\_prefixer.scss" />
+    <Content Include="Bootstrap\sass\components\_preloader.scss" />
+    <Content Include="Bootstrap\sass\components\_roboto.scss" />
+    <Content Include="Bootstrap\sass\components\_sideNav.scss" />
+    <Content Include="Bootstrap\sass\components\_slider.scss" />
+    <Content Include="Bootstrap\sass\components\_table_of_contents.scss" />
+    <Content Include="Bootstrap\sass\components\_tabs.scss" />
+    <Content Include="Bootstrap\sass\components\_toast.scss" />
+    <Content Include="Bootstrap\sass\components\_tooltip.scss" />
+    <Content Include="Bootstrap\sass\components\_typography.scss" />
+    <Content Include="Bootstrap\sass\components\_variables.scss" />
+    <Content Include="Bootstrap\sass\components\_variables.scss.bak" />
+    <Content Include="Bootstrap\sass\components\_waves.scss" />
+    <Content Include="Bootstrap\sass\ghpages-materialize.scss" />
+    <Content Include="Bootstrap\sass\materialize.css.map" />
+    <Content Include="Bootstrap\sass\materialize.scss" />
+    <Content Include="Bootstrap\sass\style.css.map" />
+    <Content Include="Bootstrap\sass\style.scss" />
+    <Content Include="Bootstrap\sass\style.scss.bak" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Proccess\Attendance.aspx" />
+    <Content Include="Proccess\CourseEvaluation.aspx" />
+    <Content Include="ProgramDismiss.aspx" />
+    <Content Include="Proccess\Enrollment.aspx" />
+    <Content Include="Proccess\Grades.aspx" />
+    <Content Include="Reports\Applications.aspx" />
+    <Content Include="Reports\ProgramInformation.aspx" />
+    <Content Include="Bootstrap\css\materialize.css" />
+    <Content Include="Bootstrap\css\materialize.min.css" />
+    <Content Include="Bootstrap\css\page-center.css" />
+    <Content Include="Bootstrap\css\prism.css" />
+    <Content Include="Bootstrap\css\style.css" />
+    <Content Include="Bootstrap\css\style.min.css" />
+    <Content Include="Bootstrap\font\material-design-icons\LICENSE.txt" />
+    <Content Include="Bootstrap\font\material-design-icons\Material-Design-Icons.svg" />
+    <Content Include="Bootstrap\js\jquery-1.11.2.min.js" />
+    <Content Include="Bootstrap\js\materialize.js" />
+    <Content Include="Bootstrap\js\materialize.min.js" />
+    <Content Include="Bootstrap\js\plugins.js" />
+    <Content Include="Bootstrap\js\plugins.min.js" />
+    <Content Include="Bootstrap\js\plugins\chartist-js\chartist-script.js" />
+    <Content Include="Bootstrap\js\plugins\chartist-js\chartist.js" />
+    <Content Include="Bootstrap\js\plugins\chartist-js\chartist.min.css" />
+    <Content Include="Bootstrap\js\plugins\chartist-js\chartist.min.js" />
+    <Content Include="Bootstrap\js\plugins\chartjs\chart-script.js" />
+    <Content Include="Bootstrap\js\plugins\chartjs\chart.min.js" />
+    <Content Include="Bootstrap\js\plugins\chartjs\chartjs-sample-chart.js" />
+    <Content Include="Bootstrap\js\plugins\d3\d3.js" />
+    <Content Include="Bootstrap\js\plugins\d3\d3.min.js" />
+    <Content Include="Bootstrap\js\plugins\data-tables\css\jquery.dataTables.css" />
+    <Content Include="Bootstrap\js\plugins\data-tables\css\jquery.dataTables.min.css" />
+    <Content Include="Bootstrap\js\plugins\data-tables\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Bootstrap\js\plugins\data-tables\data-tables-script.js" />
+    <Content Include="Bootstrap\js\plugins\data-tables\images\favicon.ico" />
+    <Content Include="Bootstrap\js\plugins\data-tables\images\sort_asc.png" />
+    <Content Include="Bootstrap\js\plugins\data-tables\images\sort_asc_disabled.png" />
+    <Content Include="Bootstrap\js\plugins\data-tables\images\sort_both.png" />
+    <Content Include="Bootstrap\js\plugins\data-tables\images\sort_desc.png" />
+    <Content Include="Bootstrap\js\plugins\data-tables\images\sort_desc_disabled.png" />
+    <Content Include="Bootstrap\js\plugins\data-tables\js\jquery.dataTables.js" />
+    <Content Include="Bootstrap\js\plugins\data-tables\js\jquery.dataTables.min.js" />
+    <Content Include="Bootstrap\js\plugins\data-tables\js\jquery.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\chart-script.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\chart.min.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\chartist-script.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\chartist.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\chartist.min.css" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\chartist.min.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\chartjs-sample-chart.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\d3.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\d3.min.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\data-tables-script.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\excanvas - Copy.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\excanvas.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\excanvas.min - Copy.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\excanvas.min.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\flot-script - Copy.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\flot-script.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.colorhelpers - Copy.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.colorhelpers.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.colorhelpers.min - Copy.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.colorhelpers.min.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.dataTables.css" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.dataTables.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.dataTables.min.css" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.dataTables.min.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.dataTables_themeroller.css" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.canvas - Copy.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.canvas.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.canvas.min - Copy.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.canvas.min.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.categories - Copy.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.categories.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.categories.min - Copy.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.categories.min.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.crosshair - Copy.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.crosshair.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.crosshair.min - Copy.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.crosshair.min.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.errorbars - Copy.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.errorbars.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.errorbars.min - Copy.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.errorbars.min.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.fillbetween - Copy.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.fillbetween.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.fillbetween.min - Copy.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.fillbetween.min.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.image.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.image.min.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.min.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.navigate.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.navigate.min.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.pie.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.pie.min.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.resize.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.resize.min.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.selection.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.selection.min.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.stack.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.stack.min.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.symbol.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.symbol.min.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.threshold.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.threshold.min.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.time.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.flot.time.min.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\jquery.js" />
+    <Content Include="Bootstrap\js\plugins\flot-chart\LICENSE.txt" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\css\fullcalendar.css" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\css\fullcalendar.min.css" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\css\fullcalendar.print.css" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\fullcalendar-script.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\js\fullcalendar.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\js\fullcalendar.min.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\js\gcal.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\js\lang-all.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\ar-ma.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\ar-sa.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\ar-tn.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\ar.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\bg.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\ca.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\cs.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\da.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\de-at.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\de.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\el.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\en-au.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\en-ca.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\en-gb.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\es.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\fa.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\fi.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\fr-ca.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\fr.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\he.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\hi.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\hr.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\hu.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\id.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\is.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\it.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\ja.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\ko.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\lt.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\lv.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\nb.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\nl.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\pl.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\pt-br.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\pt.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\ro.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\ru.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\sk.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\sl.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\sr-cyrl.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\sr.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\sv.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\th.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\tr.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\uk.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\vi.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\zh-cn.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lang\zh-tw.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lib\cupertino\images\animated-overlay.gif" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lib\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lib\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lib\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lib\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lib\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lib\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lib\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lib\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lib\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lib\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lib\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lib\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lib\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lib\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lib\cupertino\jquery-ui.min.css" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lib\jquery-ui.custom.min.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lib\jquery.min.js" />
+    <Content Include="Bootstrap\js\plugins\fullcalendar\lib\moment.min.js" />
+    <Content Include="Bootstrap\js\plugins\jvectormap\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="Bootstrap\js\plugins\jvectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Bootstrap\js\plugins\jvectormap\jquery-jvectormap.css" />
+    <Content Include="Bootstrap\js\plugins\jvectormap\vectormap-script.js" />
+    <Content Include="Bootstrap\js\plugins\morris-chart\morris-script.js" />
+    <Content Include="Bootstrap\js\plugins\morris-chart\morris.css" />
+    <Content Include="Bootstrap\js\plugins\morris-chart\morris.min.js" />
+    <Content Include="Bootstrap\js\plugins\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="Bootstrap\js\plugins\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="Bootstrap\js\plugins\sparkline\jquery.sparkline.min.js" />
+    <Content Include="Bootstrap\js\plugins\sparkline\sparkline-script.js" />
+    <Content Include="Bootstrap\js\plugins\xcharts\xcharts-script.js" />
+    <Content Include="Bootstrap\js\plugins\xcharts\xcharts.css" />
+    <Content Include="Bootstrap\js\plugins\xcharts\xcharts.js" />
+    <Content Include="Bootstrap\js\plugins\xcharts\xcharts.min.css" />
+    <Content Include="Bootstrap\js\plugins\xcharts\xcharts.min.js" />
+    <Content Include="Bootstrap\js\prism.js" />
+    <Content Include="Bootstrap\js\raphael-min.js" />
+    <Content Include="Bootstrap\sass\components\_icons-material-design.css" />
+    <Content Include="Bootstrap\sass\materialize.css" />
+    <Content Include="Bootstrap\sass\style.css" />
+    <Content Include="Bootstrap\StyleSheet1.css" />
+    <Content Include="Home.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Reports\CourseInformation.aspx" />
+    <Content Include="Reports\FinancialInformation.aspx" />
+    <Content Include="Reports\StudentInfromation.aspx" />
+    <Content Include="ShowAddress.aspx" />
+    <Content Include="Student1.aspx" />
+    <Content Include="Transactions\Enrollment.aspx" />
+    <Content Include="Transactions\StudentAttendance.aspx" />
+    <Content Include="Transactions\StudentDismissalRemoval.aspx" />
+    <Content Include="Transactions\StudentEnrollment.aspx" />
+    <Content Include="Transactions\StudentGrade.aspx" />
+    <Content Include="User Account\ChangePassword.aspx" />
+    <Content Include="User Account\ChangePasswordEmail.aspx" />
+    <Content Include="User Account\ChangeUserInformation.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Applications\Apply.aspx.cs">
+      <DependentUpon>Apply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\Apply.aspx.designer.cs">
+      <DependentUpon>Apply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\CreateProgram.aspx.cs">
+      <DependentUpon>CreateProgram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\CreateProgram.aspx.designer.cs">
+      <DependentUpon>CreateProgram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\CreateCourse.aspx.cs">
+      <DependentUpon>CreateCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\CreateCourse.aspx.designer.cs">
+      <DependentUpon>CreateCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\RegisterStudent.aspx.cs">
+      <DependentUpon>RegisterStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\RegisterStudent.aspx.designer.cs">
+      <DependentUpon>RegisterStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dreamy\HealthAppraisla.aspx.cs">
+      <DependentUpon>HealthAppraisla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dreamy\HealthAppraisla.aspx.designer.cs">
+      <DependentUpon>HealthAppraisla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dreamy\ChildRecord.aspx.cs">
+      <DependentUpon>ChildRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dreamy\ChildRecord.aspx.designer.cs">
+      <DependentUpon>ChildRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Proccess\Attendance.aspx.cs">
+      <DependentUpon>Attendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Proccess\Attendance.aspx.designer.cs">
+      <DependentUpon>Attendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Proccess\CourseEvaluation.aspx.cs">
+      <DependentUpon>CourseEvaluation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Proccess\CourseEvaluation.aspx.designer.cs">
+      <DependentUpon>CourseEvaluation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramDismiss.aspx.cs">
+      <DependentUpon>ProgramDismiss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProgramDismiss.aspx.designer.cs">
+      <DependentUpon>ProgramDismiss.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Proccess\Enrollment.aspx.cs">
+      <DependentUpon>Enrollment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Proccess\Enrollment.aspx.designer.cs">
+      <DependentUpon>Enrollment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Proccess\Grades.aspx.cs">
+      <DependentUpon>Grades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Proccess\Grades.aspx.designer.cs">
+      <DependentUpon>Grades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Applications.aspx.cs">
+      <DependentUpon>Applications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Applications.aspx.designer.cs">
+      <DependentUpon>Applications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ProgramInformation.aspx.cs">
+      <DependentUpon>ProgramInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ProgramInformation.aspx.designer.cs">
+      <DependentUpon>ProgramInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\DataAccess.cs" />
+    <Compile Include="DataBase\SessionFacade.cs" />
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CourseInformation.aspx.cs">
+      <DependentUpon>CourseInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\CourseInformation.aspx.designer.cs">
+      <DependentUpon>CourseInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialInformation.aspx.cs">
+      <DependentUpon>FinancialInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialInformation.aspx.designer.cs">
+      <DependentUpon>FinancialInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StudentInfromation.aspx.cs">
+      <DependentUpon>StudentInfromation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\StudentInfromation.aspx.designer.cs">
+      <DependentUpon>StudentInfromation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowAddress.aspx.cs">
+      <DependentUpon>ShowAddress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowAddress.aspx.designer.cs">
+      <DependentUpon>ShowAddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student1.aspx.cs">
+      <DependentUpon>Student1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student1.aspx.designer.cs">
+      <DependentUpon>Student1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions\Enrollment.aspx.cs">
+      <DependentUpon>Enrollment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Transactions\Enrollment.aspx.designer.cs">
+      <DependentUpon>Enrollment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions\StudentAttendance.aspx.cs">
+      <DependentUpon>StudentAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Transactions\StudentAttendance.aspx.designer.cs">
+      <DependentUpon>StudentAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions\StudentDismissalRemoval.aspx.cs">
+      <DependentUpon>StudentDismissalRemoval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Transactions\StudentDismissalRemoval.aspx.designer.cs">
+      <DependentUpon>StudentDismissalRemoval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions\StudentEnrollment.aspx.cs">
+      <DependentUpon>StudentEnrollment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Transactions\StudentEnrollment.aspx.designer.cs">
+      <DependentUpon>StudentEnrollment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions\StudentGrade.aspx.cs">
+      <DependentUpon>StudentGrade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Transactions\StudentGrade.aspx.designer.cs">
+      <DependentUpon>StudentGrade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Masterpage.Master.cs">
+      <DependentUpon>Masterpage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Masterpage.Master.designer.cs">
+      <DependentUpon>Masterpage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User Account\ChangePasswordEmail.aspx.cs">
+      <DependentUpon>ChangePasswordEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Account\ChangePasswordEmail.aspx.designer.cs">
+      <DependentUpon>ChangePasswordEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User Account\ChangeUserInformation.aspx.cs">
+      <DependentUpon>ChangeUserInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Account\ChangeUserInformation.aspx.designer.cs">
+      <DependentUpon>ChangeUserInformation.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bootstrap\sass\sass\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2441</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2441/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
